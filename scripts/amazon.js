@@ -1,10 +1,8 @@
 
 let productsHTMl=""
 let div=document.querySelector(".js-products-grid")
-console.log(div)
 
 products.forEach((product)=>{
-    console.log(product.image)
     let price=product.priceCents / 100
      
 productsHTMl+=`
@@ -60,3 +58,13 @@ productsHTMl+=`
 })
 
 div.innerHTML+=productsHTMl
+
+let AllButtons=document.querySelectorAll(".add-to-cart-button")
+AllButtons.forEach((button)=>{
+button.addEventListener("click",()=>{
+   cart.push({
+    name:"abdalle"
+   })
+   console.log(cart[0].name)
+})
+})
